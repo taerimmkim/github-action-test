@@ -19,4 +19,4 @@ jobs:
 
       - name: Test DAG
         run: |
-          python dag_validation.py
+          python ${{ github.workspace }}/dag_validation.py
