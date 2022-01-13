@@ -6,7 +6,7 @@ from airflow.operators.python_operator import PythonOperator
 
 from datetime import datetime
 import random
-import aa
+#import aa
 
 default_args = {
   'owner': 'taerim',
@@ -27,7 +27,7 @@ def hello():
   else:
     bye()
 
-with DAG('user_branch', default_args=default_args, catchup=False) as dag:
+with DAG('user_branch_2', default_args=default_args, catchup=False) as dag:
   hello = BranchPythonOperator(task_id='hello', python_callable=hello)
   hello2 = PythonOperator(task_id='hello2', python_callable=hello2)
   bye = PythonOperator(task_id='bye', python_callable=bye)
