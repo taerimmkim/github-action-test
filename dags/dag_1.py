@@ -31,5 +31,3 @@ with DAG('user_branch', default_args=default_args, catchup=False) as dag:
   hello2 = PythonOperator(task_id='hello2', python_callable=hello2)
   bye = PythonOperator(task_id='bye', python_callable=bye)
 
-
-  hello >> [hello2, bye]
