@@ -8,3 +8,5 @@ def test_dag_validation():
     print(f"expected_dag_size: {expected_dag_size}")
     assert dag_bag.size() == expected_dag_size
 
+test_dag_validation()
+
