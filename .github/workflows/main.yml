@@ -1,5 +1,7 @@
 on: push
 
+permissions: read-all
+
 jobs:
   pre-build:
     runs-on: ubuntu-latest
