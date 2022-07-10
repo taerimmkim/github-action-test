@@ -1,0 +1,13 @@
+on: push
+
+jobs:
+  build:
+    runs-on: self-hosted
+    container:
+      image: node:14.15.0-alpine3.12
+
+    steps:
+      - name: Log the node version
+        run: |
+          node -v
+          cat /etc/os-release
